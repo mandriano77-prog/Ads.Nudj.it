@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
 
 export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
@@ -6,9 +5,9 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
-        <Link to="/" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <img src={logo} alt="Nudj Ads" className="h-9 w-auto" />
-        </Link>
+        </a>
         <nav className="hidden items-center gap-8 md:flex">
           <a href="#how" className={`text-sm font-medium ${isLight ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-foreground"}`}>Come Funziona</a>
           <a href="#case-study" className={`text-sm font-medium ${isLight ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-foreground"}`}>Case Study</a>
